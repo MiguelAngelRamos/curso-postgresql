@@ -14,9 +14,25 @@ substring(string FROM start_position [FOR lenght] )
 
 ## Ejemplos
 
-#### Ejemplo: Extraer una subcadena desde una posición especifica
+#### Ejemplo 1: Extraer una subcadena desde una posición especifica
 
 ```sql
 SELECT substring('Hello, world!' FROM 8)
-
 ```
+
+#### Ejemplo 2: Extraer una subcadena desde una posición especifica
+
+```sql
+SELECT substring('Hello, world!' FROM 8 FOR 5) -- world
+```
+```sql
+SELECT substring('Hello, world!' FROM 8)
+SELECT substring('Hello, world!' FROM 8 FOR 5)
+
+select position('world' in 'Hello, world!');
+
+select position('@' in 'sofia@correo.com');
+SELECT substring('sofia@correo.com' FROM position('@' in 'sofia@correo.com') + 1);
+```
+
+
