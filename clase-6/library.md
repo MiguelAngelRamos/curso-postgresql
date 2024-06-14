@@ -26,8 +26,7 @@ create table loans (
  loan_date DATE not null,
  return_date DATE,
  foreign key(user_id) references users(user_id),
- foreing key(book_id) references books(book_id)
-
+ foreign key(book_id) references books(book_id)
 );
 
 
