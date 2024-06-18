@@ -38,4 +38,34 @@ INSERT INTO enrollments (ceo_id, course_id) VALUES
 (3, 1), -- Satya Nadella en Strategic Leadership
 (3, 3); -- Satya Nadella en Business Strategy
 
+
+--  Consulta con inner join
+--  Necesitamos obtener del ceo (name, email) y del curso (name), el curso que esta tomando el CEO
+--    name                 email                course
+-- Sundar Pichai | sundar.pichai@example.com |Strategic Leadership
+ 
+-- Jorge
+select
+	A.name,
+	A.email,
+	B.course_name
+from
+	ceos A
+inner join enrollments C on
+	A.id = C.ceo_id
+inner join courses B on
+	B.id = C.course_id
+
+-- Lucas
+
+select
+	c."name" ,
+	c.email ,
+	c2.course_name
+from
+	ceos c
+inner join enrollments e on
+	c.id = e.ceo_id
+inner join courses c2 on
+	c2.id = e.course_id
 ```
