@@ -27,5 +27,28 @@ insert into books(title, author_id, publication_date) values
 ('The Lord of the Rings',2, '1954-07-29'),
 ('A Game of Thrones', 3, '1996-08-06');
 
+select * from authors;
 
+-- Consulta con Inner Join para obtener una lista de libros junto con los nombres de sus authores
+
+select
+	i.title ,
+	a."name" ,
+	a.birthdate
+from
+	authors a
+inner join books i
+on
+	a.id = i.author_id;
+
+-- Otra propuesta
+select
+	books.title as book_title,
+	authors.name as author_name,
+	books.publication_date
+from
+	books
+inner join 
+	authors on books.author_id = authors.id;
+ 
 ```
