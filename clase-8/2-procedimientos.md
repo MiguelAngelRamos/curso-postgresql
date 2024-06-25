@@ -24,5 +24,23 @@ CREATE TABLE emails (
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+ va llamar create_user va recibir por parametro "p_username" y el p_email
+
+create or replace function create_user(p_username VARCHAR, p_email VARCHAR)
+returns void as $$
+begin 
+	-- insertar el usuario en tabla users
+	insert into users(username, email) values(p_username, p_email);	
+	-- Resgistrar la acción en a la tabla audit_log
+	insert into audit_log(action, username) values ('User created', p_username);
+
+
+	-- Simular el envio de un correo
+	
+	insert into emails(recipient, suject, body) 
+	values (p_email, 'Welcolme', 'Welcome to user service', '|| p_username || '!' )
+end
+
+
 
 ```
