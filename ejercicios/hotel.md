@@ -5,16 +5,16 @@ Descripción: Se te proporcionan dos tablas normalizadas: habitaciones y reserva
 
 Tablas:
 1.	habitaciones
-  o	id (serial, primary key)
-  o	numero (integer, unique)
-  o	tipo (varchar(50))
-  o	disponible (boolean)
+  -	id (serial, primary key)
+  -	numero (integer, unique)
+  -	tipo (varchar(50))
+  -	disponible (boolean)
 2.	reservas
-  o	id (serial, primary key)
-  o	habitacion_id (integer, foreign key referencia a habitaciones(id))
-  o	cliente (varchar(100))
-  o	fecha_entrada (date)
-  o	fecha_salida (date)
+  -	id (serial, primary key)
+  -	habitacion_id (integer, foreign key referencia a habitaciones(id))
+  -	cliente (varchar(100))
+  -	fecha_entrada (date)
+  -	fecha_salida (date)
 
 Instrucciones:
 1.	Crea las tablas habitaciones y reservas.
