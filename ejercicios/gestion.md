@@ -5,10 +5,10 @@ Descripción: Se te proporcionan dos tablas normalizadas: productos y pedidos. T
 
 Tablas:
 1.	Productos
-  o	id (serial, primary key)
-  o	nombre (varchar(100), unique)
-  o	precio (numeric)
-  o	stock (integer)
+  - id (serial, primary key)
+  - nombre (varchar(100), unique)
+  -	precio (numeric)
+  -	stock (integer)
 2.	pedidos
   o	id (serial, primary key)
   o	producto_id (integer, foreign key referencia a productos(id))
