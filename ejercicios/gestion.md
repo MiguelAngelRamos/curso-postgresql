@@ -10,11 +10,11 @@ Tablas:
   -	precio (numeric)
   -	stock (integer)
 2.	pedidos
-  o	id (serial, primary key)
-  o	producto_id (integer, foreign key referencia a productos(id))
-  o	cliente (varchar(100))
-  o	cantidad (integer)
-  o	fecha_pedido (date)
+  -	id (serial, primary key)
+  -	producto_id (integer, foreign key referencia a productos(id))
+  -	cliente (varchar(100))
+  -	cantidad (integer)
+  -	fecha_pedido (date)
 
 Instrucciones:
 1.	Crea las tablas productos y pedidos.
