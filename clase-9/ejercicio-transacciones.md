@@ -22,7 +22,7 @@ insert into habitaciones(numero, tipo, disponible) values
 
 -- Una función en PL/pgSQL
 create or replace function reservar_habitacion(
-	p_habitacion_id integer,
+  p_habitacion_id integer,
 	p_cliente varchar,
 	p_fecha_entrada DATE,
 	p_fecha_salida DATE
