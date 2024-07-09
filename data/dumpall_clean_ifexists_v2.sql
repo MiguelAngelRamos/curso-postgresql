@@ -50,8 +50,8 @@ ALTER ROLE postgres WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION
 -- Tablespaces
 --
 
-CREATE TABLESPACE tbs_recetas OWNER myuser LOCATION '/var/lib/postgresql/12/tbs_recetas';
-CREATE TABLESPACE tbs_lab OWNER laboratorio LOCATION '/var/lib/postgresql/12/tbs_lab';
+CREATE TABLESPACE tbs_recetas OWNER myuser LOCATION '/var/lib/postgresql/16/tbs_recetas';
+CREATE TABLESPACE tbs_lab OWNER laboratorio LOCATION '/var/lib/postgresql/16/tbs_lab';
 
 
 --
