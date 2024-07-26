@@ -1,4 +1,4 @@
-El error "FATAL: la autentificación Peer falló para el usuario «sofiadevelopers»" indica que PostgreSQL está intentando usar el método de autenticación "peer" para autenticar al usuario `sofiadevelopers`. El método "peer" verifica que el nombre de usuario del sistema operativo coincida con el nombre de usuario de PostgreSQL.
+El error "FATAL: la autentificación Peer falló para el usuario «sofiadevelopers»" indica que PostgreSQL está intentando usar el método de autenticación "peer" para autenticar al usuario `sofiadeveloper`. El método "peer" verifica que el nombre de usuario del sistema operativo coincida con el nombre de usuario de PostgreSQL.
 
 Para solucionar este problema, puedes cambiar el método de autenticación en el archivo `pg_hba.conf` a "md5" o "password" para permitir la autenticación con contraseña.
 
@@ -38,23 +38,23 @@ Para solucionar este problema, puedes cambiar el método de autenticación en el
 
 4. **Verificar la Conexión**:
 
-   Ahora, intenta conectarte nuevamente como el usuario `sofiadevelopers`.
+   Ahora, intenta conectarte nuevamente como el usuario `sofiadeveloper`.
 
    ```sh
-   psql -U sofiadevelopers -d ejemplo_db
+   psql -U sofiadeveloper -d ejemplo_db
    ```
 
-### Confirmar Permisos de `sofiadevelopers`
+### Confirmar Permisos de `sofiadeveloper`
 
 Una vez que hayas solucionado el problema de autenticación y te hayas conectado con éxito, puedes verificar los permisos siguiendo los pasos mencionados anteriormente. A continuación, un resumen de las consultas para verificar los permisos:
 
 1. **Verificar permisos de selección, inserción, actualización y eliminación**:
 
    ```sql
-   SELECT has_table_privilege('sofiadevelopers', 'esquema_genius.mi_tabla', 'SELECT');
-   SELECT has_table_privilege('sofiadevelopers', 'esquema_genius.mi_tabla', 'INSERT');
-   SELECT has_table_privilege('sofiadevelopers', 'esquema_genius.mi_tabla', 'UPDATE');
-   SELECT has_table_privilege('sofiadevelopers', 'esquema_genius.mi_tabla', 'DELETE');
+   SELECT has_table_privilege('sofiadeveloper', 'esquema_genius.mi_tabla', 'SELECT');
+   SELECT has_table_privilege('sofiadeveloper', 'esquema_genius.mi_tabla', 'INSERT');
+   SELECT has_table_privilege('sofiadeveloper', 'esquema_genius.mi_tabla', 'UPDATE');
+   SELECT has_table_privilege('sofiadeveloper', 'esquema_genius.mi_tabla', 'DELETE');
    ```
 
 2. **Probar operaciones en la tabla**:
