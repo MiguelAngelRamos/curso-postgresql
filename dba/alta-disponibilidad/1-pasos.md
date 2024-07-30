@@ -4,8 +4,11 @@
 sudo mkdir /var/lib/pgsql/backup_master
 ```
 ```sh
-sudo chown postgres:postgres /var/lib/pgsql/backup_master
+sudo chown -R postgres:postgres /var/lib/pgsql/backup_master
+sudo chmod -R 700 /var/lib/pgsql/backup_master
 ```
+
+
 
 
 ## Crear un usuario con permisos de replicador
