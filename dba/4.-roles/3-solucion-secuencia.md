@@ -21,7 +21,7 @@ Para realizar ciertas acciones administrativas en PostgreSQL, es necesario conec
 
 1. Inicia sesión como el usuario `postgres` y conéctate a la base de datos `ejemplo_db`:
     ```sh
-    postgres@fedora:~$ psql -U postgres -d ejemplo_db
+    psql -U postgres -d ejemplo_db
     ```
 2. Una vez conectado, otorga todos los privilegios necesarios en la secuencia al grupo `genius`:
     ```sql
@@ -39,7 +39,7 @@ Para realizar ciertas acciones administrativas en PostgreSQL, es necesario conec
 
 1. Conéctate de nuevo como el usuario `sofiadeveloper` a la base de datos `ejemplo_db`:
     ```sh
-    miguel@fedora:~$ psql -U sofiadeveloper -d ejemplo_db
+    psql -U sofiadeveloper -d ejemplo_db
     ```
 2. Una vez conectado, inserta el nuevo registro en la tabla:
     ```sql
@@ -48,7 +48,7 @@ Para realizar ciertas acciones administrativas en PostgreSQL, es necesario conec
 
 Con estos pasos, deberías poder realizar la inserción sin problemas de permisos, ya que el usuario `sofiadeveloper` heredará los permisos del grupo `genius`.
 
-### Nota
+### Nota (Opcional)
 
 Si prefieres otorgar los permisos directamente al usuario `sofiadeveloper`, simplemente ajusta el comando de otorgamiento de permisos así:
 

@@ -13,6 +13,14 @@ sudo chmod -R 700 /var/lib/pgsql/backup_master
 
 ## Crear un usuario con permisos de replicador
 
+```sh
+sudo su - postgres
+```
+
+```sh
+psql
+```
+
 ```sql
 create user replicador with replication password 'academy';
 ```
