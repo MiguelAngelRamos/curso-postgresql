@@ -5,6 +5,8 @@
 Primero, instala PostgreSQL 16 y `repmgr` en ambos nodos (maestro y esclavo).
 
 ```bash
+sudo dnf update 
+sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/F-40-x86_64/pgdg-fedora-repo-latest.noarch.rpm
 sudo dnf install -y postgresql-server postgresql-contrib
 sudo dnf install -y repmgr_16
 ```
